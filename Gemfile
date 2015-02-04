@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+#bootsrap gem
+gem 'bootstrap-sass', '~> 3.3.3'
+
+#bootstrap autoprefixr
+gem 'autoprefixer-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
