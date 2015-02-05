@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
-#bootsrap gem
+#gemfile for simple form
+gem 'simple_form'
+
+#gem file for paginate
+gem 'will_paginate', '~> 3.0.5'
+
+#gem file for bootstrap style for paginate
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+
+#bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.3'
 
 #bootstrap autoprefixr
