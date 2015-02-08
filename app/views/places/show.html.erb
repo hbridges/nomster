@@ -46,6 +46,12 @@
 
 <div class="clear"></div>
 
+<%= simple_form_for @photo, :url => '#' do |f| %>
+  <%= f.input :caption %>
+  <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
+<% end %>
+
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
