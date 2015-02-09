@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#photo upload gem
+gem 'carrierwave'
+
 gem 'figaro', '>= 1.0.0'
 
 #map lng lat converter
