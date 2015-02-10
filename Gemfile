@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "fog", "~> 1.3.1"
+
 #photo upload gem
 gem 'carrierwave'
 

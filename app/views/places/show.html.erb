@@ -123,6 +123,9 @@
 		  <br />
 		  <br />
 		  <%= photo.caption %>
+		  <div class="pull-right">
+   			 <%#= link_to 'Destroy', place_photo_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>
+ 		  </div>
 	</div>
 <% end %>
 
@@ -138,6 +141,7 @@
 				<% end %>
 				<b><%= comment.message %></b>
 				<small><%= comment.user.email %></small>
+				<%#= link_to 'Edit', edit_place_comment_path(@place), :class => 'btn btn-primary' %>
 		</div>
 	<% end %>
 
