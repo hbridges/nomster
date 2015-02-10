@@ -98,25 +98,38 @@
 </div>
 
 <div class="col-xs-10 col-xs-offset-1">
-	<h1 class="pull-left">Comments</h1>
 	<!-- Button trigger modal -->
-	<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#commentmodal">
-	  Add a Comment
-	</button>
-		<!-- Button trigger modal -->
-	<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#photomodal">
-	  Add a Photo
-	</button>
+	<div class="pull-right">
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commentmodal">
+		  Add a Comment
+		</button>
+			<!-- Button trigger modal -->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#photomodal">
+		  Add a Photo
+		</button>
+	</div>
 
 </div>
+
+	<% if @place.photos.present? %>
+	<h1 class="col-xs-10 col-xs-offset-1 pull-left">Photo's</h1>
+	<% end %>
 
 <div class="clear"></div>
 
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture %>
-  <%= photo.caption %>
+	<div class="booyah-box col-xs-10 col-xs-offset-1">
+		  <%= image_tag photo.picture, :class => 'img-responsive' %>
+		  <br />
+		  <br />
+		  <%= photo.caption %>
+	</div>
 <% end %>
 
+<div class="clear"></div>
+<% if @place.comments.present? %>
+	<h1 class="pull-left col-xs-10 col-xs-offset-1">Comments</h1>
+<% end %>
 	<% @place.comments.each do |comment| %>
 		<div class= "col-xs-12 col-sm-6">
 			<blockquote>
